@@ -1,0 +1,29 @@
+#frame {
+	width: 800px;
+	height: 600px;
+	overflow: hidden;
+	position: relative; /* absolutes will be within this relative element */
+}
+
+#tray {
+	width: 2400px;
+}
+
+.slide {
+	width: 800px;
+	height: 600px;
+	float: left;
+}
+
+a.prev, a.next {
+	position: absolute;
+	top: 50%;
+}
+
+a.prev {
+	left: 0;
+}
+
+a.next {
+	right: 0;
+}
