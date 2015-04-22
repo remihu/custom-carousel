@@ -6,7 +6,8 @@
 }
 
 #tray {
-	width: 2400px;
+	position: relative;
+	/* width: 2400px; carousel.js will dynamically set a width */
 }
 
 .slide {
