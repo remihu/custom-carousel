@@ -10,8 +10,14 @@ $(document).ready(function(){
 
 	$("a.next").click(function(event){
 
-		//update positionNumber
-		positionNum += 1;
+		if (positionNum === (numOfSlides - 1)) {
+			//when we are on the last slide
+			positionNum = 0;
+		}else {
+			//update positionNumber
+			positionNum += 1;			
+		}
+
 		//calculate distance to move
 		var distance = positionNum * slideWidth;
 		//animate the #tray
@@ -24,8 +30,14 @@ $(document).ready(function(){
 
 	$("a.prev").click(function(event){
 
-		//update positionNumber
-		positionNum -= 1;
+		if(positionNum === 0){
+			//when we are on the first slide
+			positionNum = (numOfSlides - 1);
+		}else {
+			//update positionNumber
+			positionNum -= 1;
+		}
+
 		//calculate distance to move
 		var distance = positionNum * slideWidth;
 		//animate the #tray
